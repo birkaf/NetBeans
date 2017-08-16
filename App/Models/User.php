@@ -5,19 +5,15 @@
  * @author AlekseevNote
  */
 namespace App\Models;
-use App\Db;
 
+use App\Model;
 
-class User {
+class User extends Model {
+    //public static $table = 'users';
+    const TABLE = 'users';
     public $email;
     public $name;
     
-    public static function findAll(){
-        $db = new Db();
-        return $db->query(
-                'SELECT * FROM users',
-                '\App\Models\User'
-                );
-    }
+   
     //put your code here
 }
