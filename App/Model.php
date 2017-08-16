@@ -7,9 +7,9 @@ namespace App;
  *
  * @author AlekseevNote
  */
-class Model {
-    
+abstract class Model {
     const TABLE = '';
+    
     public static function findAll(){
         $db = new Db();
         return $db->query(
